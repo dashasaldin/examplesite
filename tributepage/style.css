@@ -1,0 +1,64 @@
+body{
+    font-family: "Lobster", sanf-serif;
+    background-color:#FFFACD;
+    color: black;
+    line-height: 1.5;
+    margin: 0;
+}
+#main{
+    margin: 30px 8px;
+    padding: 15px;
+    border-radius: 5px;   
+}
+#title {
+    display: block;
+    color: #8600e6;
+    font-weight: bold;
+    text-align: center;
+}
+p{
+    display: block;
+    text-align: center;
+}
+.grey-border {
+    border-color: #666666;
+    border-width: 10px;
+    border-style: solid;
+}
+#img-div {
+    display: block;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+#image {
+    max-width: 50%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+#img-caption {
+    margin: 15px 0px 5px 0px;
+}
+#headline {
+    margin: 50px 0;
+    text-align: center;
+}
+ul {
+    max-width: 550px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+    line-height: 1.6;
+}
+blockquote {
+    font-family: sans-serif;
+    font-style: italic;
+    max-width: 545px;
+    margin: 0 auto 50px auto;
+    text-align: left;   
+}
+h3{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+}
