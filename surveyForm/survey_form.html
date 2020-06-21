@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+  </head>
+    
+  <body>
+    <header class="header">
+        <h1 id="title" class="text-center">IP Median Survey Form</h1>
+        <p id="description" class="description text-center">Thank you for your comments on our work</p>
+    </header>
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+            </input>
+        </div>
+        <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </input>
+        </div>
+        <div class="form-group">
+            <label for="number" id="number-label">
+                Age
+                <span class="clue">(optional)</span>
+            </label>
+            <input type="number" name="age" id="number" min="18" max="99" class="form-control" placeholder="Age" required>
+        </div>
+        <div class="form-group">
+            <p>What is your current position?</p>
+            <select id="dropdown" name="role" class="form-control" required>
+                <option disabled selected value>Select your current position</option>
+                <option value="specialist">Regulatory Affairs specialist</option>
+                <option value="manager">Regulatory Affairs manager/General Manager</option>
+                <option value="preferNo">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Whould you recommend IP Median?</p>
+            <label>
+                <input name="user-recommend" value="yes" type="radio" class="input-radio" checked>
+                Yes
+            </label>
+            <label>
+                <input name="user-recommend" value="maybe" type="radio" class="input-radio" checked>
+                Maybe
+            </label>
+            <label>
+                <input name="user-recommend" value="not-sure" type="radio" class="input-radio" checked>
+                Not sure
+            </label>
+            <div class="form-group">
+                <p>What do you think define IP Median?</p>
+                <select id="most-like" name="mostLike" class="form-control" required>
+                    <option  disabled selected value>Select an option</option>
+                    <option value="quality">Quality</option>
+                    <option value="performance-time">Performance time</option>
+                    <option value="prices">Prices</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>What would you like us to improve?
+                <span class="clue">(Check all that apply</span>
+                </p>
+                <label>
+                    <input name="prefer" value="reports" type="checkbox" class="input-checkbox">
+                    Reports
+                </label>
+                <label>
+                    <input name="prefer" value="communication" type="checkbox" class="input-checkbox">
+                    Communication
+                </label>
+                <label>
+                    <input name="prefer" value="language-variety" type="checkbox" class="input-checkbox">
+                    Language variety
+                </label>
+                <div class="form-group">
+                    <p>Your comments or suggestions</p>
+                    <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here.."></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">Submit</button>
+                </div>
+    </form>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+  </body>
+</html>
