@@ -22,14 +22,13 @@ a {
     text-transform: uppercase;
     border: 3px black solid;
     border-radius: 2px;
-    background: 006400;
+    background: #006400;
     cursor: pointer;
 }
 .grid {
     display: flex;
 }
 header {
-    position: fixed;
     top: 0;
     min-height: 75px;
     padding: 0px 20px;
@@ -53,7 +52,7 @@ header {
     }
 }
 .logo >  img {
-    width: 100%;
+    width: 200px;
     height: 100%;
     max-width: 300px;
     display: flex;
@@ -120,7 +119,7 @@ nav > ul {
     height: 30px;
     margin: 15px 0;
     border: 0;
-    background-color: 006400;
+    background-color: #006400;
 }
 @media (max-width: 650px) {
     #hero {
@@ -217,7 +216,7 @@ nav > ul {
 footer {
     margin-top: 30px;
     padding: 20px;
-    background-color: DCDCDC;
+    background-color: #DCDCDC;
 }
 
 footer > span {
