@@ -22,7 +22,7 @@ a {
     text-transform: uppercase;
     border: 3px black solid;
     border-radius: 2px;
-    background: transparent;
+    background: 006400;
     cursor: pointer;
 }
 .grid {
@@ -120,7 +120,7 @@ nav > ul {
     height: 30px;
     margin: 15px 0;
     border: 0;
-    background-color: black;
+    background-color: 006400;
 }
 @media (max-width: 650px) {
     #hero {
