@@ -23,6 +23,7 @@ a {
     border: 3px black solid;
     border-radius: 2px;
     background: #006400;
+    color: white;
     cursor: pointer;
 }
 .grid {
@@ -33,16 +34,17 @@ header {
     min-height: 75px;
     padding: 0px 20px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    position: fixed;
+    width: 100%;
+
+}
+.main-content {
+    margin-top: 114px;
 }
 @media  (max-width: 600px) {
     header {
         flex-wrap: wrap;
     }
-}
-.logo  {
-    width: 60vw;
 }
 @media (max-width: 650px) {
     .logo {
@@ -51,15 +53,12 @@ header {
         position: relative;
     }
 }
-.logo >  img {
-    width: 200px;
-    height: 100%;
-    max-width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.logo {
     margin-left: 20px;
+    flex: 1;
+}
+#header-img {
+    width: 200px;
 }
 @media (max-width: 650px) {
     .logo > img {
@@ -88,6 +87,7 @@ nav > ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    list-style: none;
 }
 @media (max-width: 650px) {
     nav > ul {
@@ -101,7 +101,7 @@ nav > ul {
     justify-content: center;
     text-align: center;
     height: 200px;
-    margin-top: 50px;
+    margin-top: 150px;
 
 }
 #hero > h2 {
@@ -135,7 +135,7 @@ nav > ul {
     justify-content: center;
     height: 125px;
     width: 20vw;
-    color: black;
+    color: #006400;
 }
 @media (max-width: 550px) {
     #about-us .icon {
@@ -193,6 +193,7 @@ nav > ul {
 }
 .product > h2 {
     margin-top: 15px;
+    flex: 1;
 }
 .product > li {
     padding: 5px 0;
@@ -218,7 +219,14 @@ footer {
     padding: 20px;
     background-color: #DCDCDC;
 }
-
+footer > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+footer > ul > li {
+    padding: 0 10px;
+    list-style: none;
+}
 footer > span {
     margin-top: 5px;
     display: flex;
