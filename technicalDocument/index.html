@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Technical Documentation Page</title>
+  </head>
+    
+  <body>
+      <nav id="navbar">
+          <header>Django Documentation</header>
+          <ul>
+              <li>
+                  <a class="nav-link" href="#First steps">First steps</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#Getting help">Getting help</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Forms">Forms</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Security">Security</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Performance and optimization">Performance and optimization</a>
+            </li>
+          </ul>
+      </nav>
+      <main id="main-doc">
+          <section class="main-section" id="First steps"></section>
+          <header>First steps</header>
+          <article>
+              <p>Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. 
+                  Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. 
+                  It’s free and open source</p>
+                <p>Are you new to Django or to programming? This is the place to start!</p>
+                  <ul>
+                      <li>From scratch:</li>
+                      <li>Tutorial:</li>
+                      <li>Advanced Tutorials:</li>
+                  </ul>
+          </article>
+          <section class="main-section" id="Getting help">
+              <header>Getting help</header>
+              <article>
+                  <p>Having trouble? We’d like to help!</p>
+                  <p>Please look through the links below for answers</p>
+                  <ul>
+                      <li>Try the FAQ – it’s got answers to many common questions.</li>
+                      <li>Looking for specific information? Try the Index, Module Index or the detailed table of contents.</li>
+                      <li>Not found anything? See FAQ: Getting Help for information on getting support and asking questions to the community.</li>
+                      <li>Report bugs with Django in our ticket tracker.</li>
+                  </ul>
+              </article>
+          </section>
+          <section class="main-section" id="Forms">
+            <header>Forms</header>
+            <article>
+                <p>Django provides a rich framework to facilitate the creation of forms and the manipulation of form data.</p>
+                <p>We already know what we want our HTML form to look like. Our starting point for it in Django is this:</p>
+                <code>from django import forms
+                    class NameForm(forms.Form):
+                        your_name = forms.CharField(label='Your name', max_length=100)</code>
+                <p>The whole form, when rendered for the first time, will look like:</p>
+                <code><label for="your_name">Your name: </label>
+                    <input id="your_name" type="text" name="your_name" maxlength="100" required></code>
+                <p>We don’t need to do much in our name.html template:</p>
+                <code><form action="/your-name/" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" value="Submit">
+                </form>
+                </code>
+                </article>
+        </section>
+        <section class="main-section" id="Security">
+            <header>Security</header>
+            <article>
+                <p>Security is a topic of paramount importance in the development of Web applications and Django provides multiple protection tools and mechanisms:</p>
+                <p>Setting X-Frame-Options for all responses</p>
+                <code>MIDDLEWARE = [
+                    ...
+                    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+                    ...
+                ]</code>
+                <p>To set the X-Frame-Options header on a per view basis, Django provides these decorators:</p>
+                <code>@xframe_options_deny
+                    def view_one(request):
+                        return HttpResponse("I won't display in any frame!")
+                    
+                    @xframe_options_sameorigin
+                    def view_two(request):
+                        return HttpResponse("Display in a frame if it's from the same origin as me.")</code>
+            </article>
+        </section>
+        <section class="main-section" id="Performance and optimization">
+            <header>Performance and optimization</header>
+            <article>
+                <p>HThere are a variety of techniques and tools that can help get your code running more efficiently - faster, and using fewer system resources.</p>
+                <p>There are other trade-offs to bear in mind. Your own time is a valuable resource, more precious than CPU time. Some improvements might be too difficult to be worth implementing, or might affect the portability or maintainability of the code. Not all performance improvements are worth the effort.</p>
+                <p>So, you need to know what performance improvements you are aiming for, and you also need to know that you have a good reason for aiming in that direction.</p>
+            </article>
+        </section>
+      </main>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+  </body>
+</html>
