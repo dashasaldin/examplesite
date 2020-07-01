@@ -57,6 +57,7 @@ header {
 
 #main-doc {
   position: absolute;
+  margin-left: 310px;
   padding: 20px;
   margin-bottom: 110px;
 }
@@ -93,7 +94,6 @@ code {
 
   #main-doc {
     position: relative;
-    margin-left: 0px;
     margin-top: 270px;
   }
 
