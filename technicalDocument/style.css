@@ -92,11 +92,6 @@ code {
     }
 }
 
-  #main-doc {
-    position: relative;
-    margin-top: 270px;
-  }
-
 
 @media only screen and (max-width: 400px) {
   #main-doc {
